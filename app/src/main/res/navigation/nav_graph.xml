@@ -9,5 +9,26 @@
         android:id="@+id/onBoarding"
         android:name="com.example.jarnetor.onBoarding"
         android:label="fragment_on_boarding"
-        tools:layout="@layout/fragment_on_boarding" />
+        tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/action_onBoarding_to_loginFrag"
+            app:destination="@id/loginFrag" />
+        <action
+            android:id="@+id/action_onBoarding_to_initialFrag"
+            app:destination="@id/initialFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFrag"
+        android:name="com.example.jarnetor.LoginFrag"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFrag_to_initialFrag"
+            app:destination="@id/initialFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/initialFrag"
+        android:name="com.example.jarnetor.InitialFrag"
+        android:label="fragment_initial"
+        tools:layout="@layout/fragment_initial" />
 </navigation>
