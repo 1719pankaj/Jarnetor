@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "93268202484",
+    "project_id": "jarnetor-5b7f8",
+    "storage_bucket": "jarnetor-5b7f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:93268202484:android:5d70a08c5a70c1b67adfa1",
+        "android_client_info": {
+          "package_name": "com.example.jarnetor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "93268202484-63j4lh6i3gsd6u2t5p03d2833kjagci7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCV3uKhQA7KGe1BYN--khtiFc1KjT3W2hw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "93268202484-63j4lh6i3gsd6u2t5p03d2833kjagci7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
