@@ -153,17 +153,36 @@ class SubjectFrag : Fragment() {
             "subCode" to subCode
         )
 
+        val lab = hashMapOf(
+            "lab1" to "url",
+            "lab1Thumb" to "url"
+        )
+
+        val termPaper = hashMapOf(
+            "TP1" to "url",
+            "TP1Thumb" to "url"
+        )
+
+        val material = hashMapOf(
+            "material1" to "url",
+            "material1Thumb" to "url"
+        )
+
+        val misc = hashMapOf(
+            "misc1" to "url",
+            "misc1Thumb" to "url"
+        )
+
         val placeholder = hashMapOf(
             "placeholder" to "url"
         )
 
-        db.collection(collection)
-            .document("$subName - $subCode")
-            .collection("Metadata")
-            .document()
-            .set(metadata)
-            .addOnSuccessListener { Log.d("TAGGER", "DocumentSnapshot successfully written!") }
-            .addOnFailureListener { e -> Log.w("TAGGER", "Error writing document", e) }
+        firestoreCreate(db, collection, subName, subCode, metadata, "Metadata", "Metadata 1")
+        firestoreCreate(db, collection, subName, subCode, lab, "Lab", "Lab 1")
+        firestoreCreate(db, collection, subName, subCode, termPaper, "TermPaper", "TermPaper 1")
+        firestoreCreate(db, collection, subName, subCode, material, "Study Material", "Material 1")
+        firestoreCreate(db, collection, subName, subCode, misc, "Misc", "Misc 1")
+
 
         db.collection(collection)
             .document("$subName - $subCode")
@@ -172,6 +191,25 @@ class SubjectFrag : Fragment() {
             .addOnFailureListener { e -> Log.w("TAGGER", "Dummy writing failed", e) }
 
         fetchSubs()
+    }
+
+    private fun firestoreCreate(
+        db: FirebaseFirestore,
+        collection: String,
+        subName: String,
+        subCode: String,
+        metadata: HashMap<String, String>,
+        collectionName: String,
+        docName: String
+    ) {
+
+        db.collection(collection)
+            .document("$subName - $subCode")
+            .collection(collectionName)
+            .document(docName)
+            .set(metadata)
+            .addOnSuccessListener { Log.d("TAGGER", "DocumentSnapshot successfully written!") }
+            .addOnFailureListener { e -> Log.w("TAGGER", "Error writing document", e) }
     }
 
 

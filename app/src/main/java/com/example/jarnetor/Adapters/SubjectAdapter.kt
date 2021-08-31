@@ -29,6 +29,9 @@ class SubjectAdapter(val activity: Activity, val context: Context): RecyclerView
         val currentSubject = subjects[position]
 //        holder.folderIv
         holder.subNameTv.text = currentSubject
+        holder.optionIv.setOnClickListener {
+            Toast.makeText(context, currentSubject, Toast.LENGTH_SHORT).show()
+        }
 
     }
 

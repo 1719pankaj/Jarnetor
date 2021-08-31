@@ -64,5 +64,12 @@
         <action
             android:id="@+id/action_subjectFrag_to_initialFrag2"
             app:destination="@id/initialFrag2" />
+        <action
+            android:id="@+id/action_subjectFrag_to_subfolderFrag"
+            app:destination="@id/subfolderFrag" />
     </fragment>
+    <fragment
+        android:id="@+id/subfolderFrag"
+        android:name="com.example.jarnetor.Fragments.SubfolderFrag"
+        android:label="SubfolderFrag" />
 </navigation>
