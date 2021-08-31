@@ -11,4 +11,34 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+
+    <string name="sign_in_with_google">Sign in With Google</string>
+    <string name="example">Example</string>
+    <string name="id">ID</string>
+    <string name="name">Name</string>
+    <string name="email_address">Email address</string>
+    <string name="sign_out">Sign out</string>
+
+    <!--    Departments-->
+    <string-array name="department_list">
+        <item>EE</item>
+        <item>ECE</item>
+        <item>ME</item>
+        <item>IT</item>
+        <item>CS</item>
+        <item>AEIE</item>
+    </string-array>
+
+    <!--    Year-->
+    <string-array name="year_list">
+        <item>1st - First</item>
+        <item>2nd - Second</item>
+        <item>3rd - Third</item>
+        <item>4th - Fourth</item>
+        <item>5th - Fifth</item>
+        <item>6th - Sixth</item>
+        <item>7th - Seventh</item>
+        <item>8th - Final</item>
+    </string-array>
+
 </resources>

@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "93268202484-hslrr14tfpkfmjfoo61tap5k5bliod9u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jarnetor",
+            "certificate_hash": "ead67b5f68a144885bc540a8471840a319fdb5d0"
+          }
+        },
+        {
           "client_id": "93268202484-63j4lh6i3gsd6u2t5p03d2833kjagci7.apps.googleusercontent.com",
           "client_type": 3
         }

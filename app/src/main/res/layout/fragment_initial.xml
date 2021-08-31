@@ -1,14 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InitialFrag">
+    tools:context=".Fragments.InitialFrag">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/yearSpinnerLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="36dp"
+        android:text="What sem are you in?"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <Spinner
+        android:id="@+id/yearSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:entries="@array/year_list"
+        android:layout_marginTop="16dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="@+id/yearSpinnerLabel"
+        app:layout_constraintTop_toBottomOf="@+id/yearSpinnerLabel" />
+
+    <TextView
+        android:id="@+id/deptSpinnerLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginTop="44dp"
+        android:text="What department?"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/yearSpinnerLabel"
+        app:layout_constraintTop_toBottomOf="@+id/yearSpinner" />
+
+    <Spinner
+        android:id="@+id/deptSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:entries="@array/department_list"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="@+id/deptSpinnerLabel"
+        app:layout_constraintTop_toBottomOf="@+id/deptSpinnerLabel" />
+
+
+    <Button
+        android:id="@+id/nextInitBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/saveInitBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Save "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
