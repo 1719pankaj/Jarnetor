@@ -13,13 +13,14 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.jarnetor.Adapters.SubjectAdapter
+import com.example.jarnetor.AddressBook.FirebaseAddress
 import com.example.jarnetor.R
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_subject.view.*
 import kotlinx.android.synthetic.main.new_sub_dialog.view.*
 
 
-class SubjectFrag : Fragment() {
+class SubjectFrag : Fragment(), SubjectAdapter.SubjectItemClicked {
 
     lateinit var mAdapter: SubjectAdapter
     val SHARED_PREF = "shared_pref"
@@ -33,7 +34,7 @@ class SubjectFrag : Fragment() {
 
         val manager = LinearLayoutManager(context)
         view.subjectRecycler.layoutManager = manager
-        mAdapter = SubjectAdapter(requireActivity(), requireContext())
+        mAdapter = SubjectAdapter(requireActivity(), requireContext(), this)
         view.subjectRecycler.adapter = mAdapter
         fetchSubs()
         view.subSwipeContainer.setOnRefreshListener {
@@ -213,12 +214,19 @@ class SubjectFrag : Fragment() {
     }
 
 
-    fun getClass(sharedPreferences: SharedPreferences?): String {
-        val collection = sharedPreferences?.getString("class", "null")
+    fun getClass(sharedPreferences: SharedPreferences): String {
+        val collection = sharedPreferences.getString("class", "null")
         if(collection == null)
             return "carp"
         else
             return collection
+    }
+
+    override fun onItemClicked(subName: String) {
+
+        FirebaseAddress(sharedPreferences).addDest(subName)
+        Toast.makeText(context, subName, Toast.LENGTH_SHORT).show()
+        findNavController().navigate(R.id.action_subjectFrag_to_subfolderFrag)
     }
 
 }

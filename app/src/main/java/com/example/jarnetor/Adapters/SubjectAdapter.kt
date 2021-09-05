@@ -12,7 +12,7 @@ import com.example.jarnetor.Fragments.SubjectFrag
 import com.example.jarnetor.R
 import kotlin.coroutines.coroutineContext
 
-class SubjectAdapter(val activity: Activity, val context: Context): RecyclerView.Adapter<SubjectAdapter.SubjectAdapterViewHolder>() {
+class SubjectAdapter(val activity: Activity, val context: Context, private val listener: SubjectItemClicked): RecyclerView.Adapter<SubjectAdapter.SubjectAdapterViewHolder>() {
 
     private var subjects: ArrayList<String> = ArrayList()
     private val subFrag = SubjectFrag ()
@@ -21,6 +21,11 @@ class SubjectAdapter(val activity: Activity, val context: Context): RecyclerView
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SubjectAdapterViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_subject, parent, false)
         val viewHolder = SubjectAdapterViewHolder(view)
+
+        view.setOnClickListener {
+            listener.onItemClicked(subjects[viewHolder.adapterPosition])
+        }
+
         return viewHolder
     }
 
@@ -59,6 +64,10 @@ class SubjectAdapter(val activity: Activity, val context: Context): RecyclerView
             subNameTv = itemView.findViewById(R.id.subNameTv)
             optionIv = itemView.findViewById(R.id.optionIv)
         }
+    }
+
+    interface SubjectItemClicked {
+        fun onItemClicked(subName: String)
     }
 
 
