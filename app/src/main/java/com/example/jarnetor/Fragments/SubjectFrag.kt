@@ -14,6 +14,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.jarnetor.Adapters.SubjectAdapter
 import com.example.jarnetor.AddressBook.FirebaseAddress
+import com.example.jarnetor.AddressBook.FirebaseAddress.firebaseAddress
 import com.example.jarnetor.R
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_subject.view.*
@@ -24,13 +25,14 @@ class SubjectFrag : Fragment(), SubjectAdapter.SubjectItemClicked {
 
     lateinit var mAdapter: SubjectAdapter
     val SHARED_PREF = "shared_pref"
-    lateinit var sharedPreferences : SharedPreferences //TODO(Didn't)
+    lateinit var sharedPreferences : SharedPreferences //TODO(Didn't barf)
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val view = inflater.inflate(R.layout.fragment_subject, container, false)
         sharedPreferences = activity?.getSharedPreferences(SHARED_PREF, Context.MODE_PRIVATE)!!
+        firebaseAddress = getClass(sharedPreferences)
 
         val manager = LinearLayoutManager(context)
         view.subjectRecycler.layoutManager = manager
@@ -222,9 +224,12 @@ class SubjectFrag : Fragment(), SubjectAdapter.SubjectItemClicked {
             return collection
     }
 
+
     override fun onItemClicked(subName: String) {
 
-        FirebaseAddress(sharedPreferences).addDest(subName)
+        firebaseAddress += "${getClass(sharedPreferences)}/$subName"
+        Log.i("TAGGER", firebaseAddress)
+
         Toast.makeText(context, subName, Toast.LENGTH_SHORT).show()
         findNavController().navigate(R.id.action_subjectFrag_to_subfolderFrag)
     }
