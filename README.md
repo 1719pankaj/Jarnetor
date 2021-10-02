@@ -3,8 +3,8 @@
 <img src="https://github.com/1719pankaj/Dank-Memes-2/blob/main/Images/meme_icon.png" align="left"
 width="200" hspace="10" vspace="10">
 
-DankMemes is a meme sharing app.  
-DankMemes is free and open source with absolutely no Ads.  
+Jarnetor is a meme sharing app.  
+Jarnetor is free and open source with absolutely no Ads.  
 Latest build available in releases section
 
 ## About
