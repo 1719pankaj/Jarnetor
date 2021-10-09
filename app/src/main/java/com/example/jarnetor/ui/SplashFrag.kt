@@ -1,4 +1,4 @@
-package com.example.jarnetor.Fragments
+package com.example.jarnetor.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

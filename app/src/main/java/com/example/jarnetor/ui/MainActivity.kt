@@ -1,7 +1,8 @@
-package com.example.jarnetor
+package com.example.jarnetor.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.jarnetor.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,16 +1,14 @@
-package com.example.jarnetor.Adapters
+package com.example.jarnetor.adapter
 
 import android.app.Activity
-import android.app.AlertDialog
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
-import com.example.jarnetor.Fragments.SubjectFrag
+import com.example.jarnetor.ui.SubjectFrag
 import com.example.jarnetor.R
-import kotlin.coroutines.coroutineContext
 
 class SubjectAdapter(val activity: Activity, val context: Context, private val listener: SubjectItemClicked): RecyclerView.Adapter<SubjectAdapter.SubjectAdapterViewHolder>() {
 
