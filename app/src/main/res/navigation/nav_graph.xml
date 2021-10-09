@@ -6,7 +6,7 @@
     app:startDestination="@id/splashFrag">
     <fragment
         android:id="@+id/splashFrag"
-        android:name="com.example.jarnetor.Fragments.SplashFrag"
+        android:name="com.example.jarnetor.ui.SplashFrag"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFrag2"
-        android:name="com.example.jarnetor.Fragments.LoginFrag"
+        android:name="com.example.jarnetor.ui.login.LoginFrag"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/onBoarding"
-        android:name="com.example.jarnetor.Fragments.onBoarding"
+        android:name="com.example.jarnetor.ui.onBoarding"
         android:label="fragment_on_boarding"
         tools:layout="@layout/fragment_on_boarding" >
         <action
@@ -49,7 +49,7 @@
     </fragment>
     <fragment
         android:id="@+id/initialFrag2"
-        android:name="com.example.jarnetor.Fragments.InitialFrag"
+        android:name="com.example.jarnetor.ui.InitialFrag"
         android:label="fragment_initial"
         tools:layout="@layout/fragment_initial" >
         <action
@@ -58,7 +58,7 @@
     </fragment>
     <fragment
         android:id="@+id/subjectFrag"
-        android:name="com.example.jarnetor.Fragments.SubjectFrag"
+        android:name="com.example.jarnetor.ui.SubjectFrag"
         android:label="fragment_subject"
         tools:layout="@layout/fragment_subject" >
         <action
@@ -70,6 +70,6 @@
     </fragment>
     <fragment
         android:id="@+id/subfolderFrag"
-        android:name="com.example.jarnetor.Fragments.SubfolderFrag"
+        android:name="com.example.jarnetor.ui.SubfolderFrag"
         android:label="SubfolderFrag" />
 </navigation>

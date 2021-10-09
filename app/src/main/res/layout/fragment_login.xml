@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_signin_background"
-    tools:context=".Fragments.LoginFrag">
+    tools:context=".ui.login.LoginFrag">
 
     <!-- TODO: Update blank fragment layout -->
     <ImageView

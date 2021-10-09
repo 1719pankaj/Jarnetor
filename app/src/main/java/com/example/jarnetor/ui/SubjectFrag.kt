@@ -1,4 +1,4 @@
-package com.example.jarnetor.Fragments
+package com.example.jarnetor.ui
 
 import android.app.AlertDialog
 import android.content.Context
@@ -12,9 +12,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.jarnetor.Adapters.SubjectAdapter
-import com.example.jarnetor.AddressBook.FirebaseAddress
-import com.example.jarnetor.AddressBook.FirebaseAddress.firebaseAddress
+import com.example.jarnetor.adapter.SubjectAdapter
+import com.example.jarnetor.data.AddressBook.FirebaseAddress.firebaseAddress
 import com.example.jarnetor.R
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_subject.view.*
