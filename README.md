@@ -2,7 +2,9 @@
 
   <br />
   
-Jarnetor is free and open source with absolutely no Ads.  
+Jarnetor is free and open source with absolutely no Ads.
+Our aim is to host all neccessary files for college on the web and serve to the students.
+Under development but hey this is going to be awesome, probably
 Latest build available in releases section
   
 ## Screenshot
